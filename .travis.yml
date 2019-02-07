@@ -1,0 +1,34 @@
+language: node_js
+
+node_js:
+  - 'node'
+  - '10'
+  - '8'
+  - '6'
+  - '4'
+
+script:
+  - npm test
+
+addons:
+  code_climate:
+    repo_token: 4140e6c153bcc97efb7e556a899b946fe7ed4fe3d19457a761e435423caa8c2c
+
+after_script:
+#  - codeclimate-test-reporter < coverage/lcov.info
+
+jobs:
+  include:
+  - stage: npm release
+    if: tag IS present
+    node_js: '10'
+    script: echo "Deploying to npm ..."
+    after_script: skip
+    deploy:
+      provider: npm
+      email: vatev.1+npm@gmail.com
+      api_key:
+        secure: rm2ppU8Ztr6GPcVUrfHCAkuO6NtUGj6EzUfCsmEy7tnV2591EjJsRb6bDRWQpQYeXn3U/Q5wCrUfB1aTmZkq3WaCwU5xxOwlE0RGBoLtOLUKlHr5zdwsRVoBkquNPZ84TvquKxNj+vmZJ14lx3dgU6U7+EsaQiXLDG0jbRiuRz+w3XPT786XFEhluwghynz0FSeka0wq55lIkUI3Jbb1O0JOAyPhVJMI+NuMMQKstCoDrs1Ta2C0QzNd/n5XVFK19l2KQnSppZ9fGZOEbNZBbnpc/QpNUy6v6j90dDGOzTwrl2Ai+RUNeb6sglBby/BhdLBdEegmnG+uoiwAjcEkRnfWN/Ct53wtieLrsA700bGTNJfBQpDzdwgwGeygFR+eGhOsNF6SC6pVhh3taLDAwClaMjvQFutDkgjsCjAWssYtK+7nWHA6wUZzITRz9XTnHa1+QLmzlNCwO3B+P56eaTCfR09aZ0iJ4Fsqe5wpyJmQJgsydOYTArmy8PH4aNuq71wu4KVr+ICCFUqZ8442BPq8v4zZho1WAtjzg2bW539I/Jaf5+ZTcsIiX7pdNb408+UuiqYs8cT3RfwfTRUIjmxvFW3S1u8/hIfKHF+9hGiw5ugP+gCWuJQP2iQvyMY/R7mB+hmK1tFBcHEK5URzzqZi9jwY1xuYu5pJUOUzZY8=
+      on:
+        tags: true
+        repo: catdad/multispawn
