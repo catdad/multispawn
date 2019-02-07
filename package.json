@@ -1,0 +1,25 @@
+{
+  "name": "multispawn",
+  "version": "0.0.1",
+  "description": "multispawn",
+  "main": "index.js",
+  "bin": {
+    "multispawn": "./multispawn.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catdad/multispawn.git"
+  },
+  "author": "Kiril Vatev <vatev.1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catdad/multispawn/issues"
+  },
+  "homepage": "https://github.com/catdad/multispawn#readme",
+  "dependencies": {
+    "shellton": "^5.0.0"
+  }
+}
