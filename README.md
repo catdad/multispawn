@@ -8,7 +8,7 @@ This is a simple CLI that will let you run multiple commands, at the same time, 
 npx multispawn npx http-server -p 8000; npx localtunnel --port 8000
 ```
 
-The above code is functionally equivalent to:
+The above code is functionally equivalent to this bit in `bash`:
 
 ```bash
 npx http-server -p 8000 &
