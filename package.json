@@ -1,6 +1,6 @@
 {
   "name": "multispawn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "multispawn",
   "main": "index.js",
   "bin": {
@@ -21,5 +21,11 @@
   "homepage": "https://github.com/catdad/multispawn#readme",
   "dependencies": {
     "shellton": "^5.0.0"
-  }
+  },
+  "keywords": [
+    "spawn",
+    "bash",
+    "background",
+    "wait"
+  ]
 }
