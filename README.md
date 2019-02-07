@@ -12,6 +12,6 @@ The above code is functionally equivalent to:
 
 ```bash
 npx http-server -p 8000 &
-npx localtunnel --port 8000
+npx localtunnel --port 8000 &
 wait
 ```
