@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/catdad/multispawn#readme",
   "dependencies": {
+    "command-join": "^2.0.0",
     "shellton": "^5.0.0"
   },
+  "devDependencies": {},
   "keywords": [
     "spawn",
     "bash",

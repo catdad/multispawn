@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
+var join = require('command-join');
 var shellton = require('shellton');
 
-var commands = process.argv.slice(2)
-.join(' ')
+var commands = join(process.argv.slice(2))
 .split(';')
 .map(function (p) {
   return p.trim();
