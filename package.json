@@ -7,7 +7,7 @@
     "multispawn": "./multispawn.js"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "nyc mocha"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
+    "nyc": "^13.2.0",
     "rootrequire": "^1.0.0"
   },
   "keywords": [
@@ -33,5 +34,16 @@
     "bash",
     "background",
     "wait"
-  ]
+  ],
+  "nyc": {
+    "statements": 30,
+    "branches": 30,
+    "lines": 30,
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "all": true,
+    "check-coverage": true
+  }
 }
