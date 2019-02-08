@@ -1,6 +1,6 @@
 {
   "name": "multispawn",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "multispawn",
   "main": "index.js",
   "bin": {
