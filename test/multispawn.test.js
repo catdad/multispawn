@@ -82,4 +82,13 @@ describe('multispawn', function () {
       expect(result.stderr).to.equal('');
     });
   });
+
+  it('prints help if called with no arguments', function () {
+    return run([]).then(function (result) {
+      expect(result.code).to.equal(0);
+      expect(result.stdout).to.contain('multispawn: run multiple processes at the same time');
+      expect(result.stdout).to.contain('multispawn command 1 ! command 2 ! command 3');
+      expect(result.stderr).to.equal('');
+    });
+  });
 });

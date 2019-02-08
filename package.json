@@ -36,9 +36,10 @@
     "wait"
   ],
   "nyc": {
-    "statements": 30,
-    "branches": 30,
-    "lines": 30,
+    "statements": 100,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100,
     "reporter": [
       "lcov",
       "text"
