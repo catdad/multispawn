@@ -1,3 +1,5 @@
 .*
 fixtures/
 test/
+coverage/
+.nyc_output/
